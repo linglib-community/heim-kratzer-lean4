@@ -1,8 +1,10 @@
-import Game.Levels.Data.L01_FilteringInverse
-import Game.Levels.Data.L02_SymmetricInverse
-import Game.Levels.Data.L03_PickATheory
-import Game.Levels.Data.L04_NoIncrementalTheory
-import Game.Levels.Data.L05_Frontier
+import Game.Levels.Data.L01_Prediction
+import Game.Levels.Data.L02_Observation
+import Game.Levels.Data.L03_Verdict
+import Game.Levels.Data.L04_SymmetricInverse
+import Game.Levels.Data.L05_PickATheory
+import Game.Levels.Data.L06_NoIncrementalTheory
+import Game.Levels.Data.L07_Frontier
 
 World "Data"
 Title "Theories meet data"

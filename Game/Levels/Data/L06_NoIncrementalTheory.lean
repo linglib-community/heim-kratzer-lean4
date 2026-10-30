@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "Data"
-Level 4
+Level 6
 
 Title "No incremental theory survives"
 

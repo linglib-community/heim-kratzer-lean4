@@ -1,6 +1,7 @@
 import GameServer
 import Eval.Presupposition.ChemlaSchlenker2012
 import Lab.Colinguistics.QuantifiedLimitedSymmetry
+import Game.Kingdom
 
 /-- `inf_comm a b : a ⊓ b = b ⊓ a`, in every lattice. On a linear order such as `SignType`, Lean
 displays `a ⊓ b` as `min a b`. -/
@@ -12,6 +13,12 @@ TheoremDoc inf_assoc as "inf_assoc" in "Lattice"
 
 /-- `neg_neg a : -(-a) = a`: double negation, for every involutive negation. -/
 TheoremDoc neg_neg as "neg_neg" in "Lattice"
+
+/-- `accepts_kleeneSymmetric_iff : kleeneSymmetric.Accepts I C F ↔
+∀ w ∈ C, Formula.strongKleene I F w ≠ 0`: a context accepts a formula by the symmetric Strong
+Kleene account when its Strong Kleene value is defined at every situation of the context. Linglib
+proves this as `Schlenker2009.strongKleeneAcceptable_symmetric_iff`. -/
+TheoremDoc accepts_kleeneSymmetric_iff as "accepts_kleeneSymmetric_iff" in "Sentences"
 
 /-- Heim's context change potentials predict presuppositions at least as strong as Peters's
 filtering connectives. -/
@@ -40,6 +47,16 @@ TheoremDoc Eval.Presupposition.Account.transparencyIncremental_stronger_limitedS
 by the first and rejects it by the second. -/
 TheoremDoc Eval.Presupposition.Account.not_transparencySymmetric_stronger_limitedSymmetry as
   "not_transparencySymmetric_stronger_limitedSymmetry" in "Map"
+
+/-- `predicted_eq a k o`: in Experiment 1, an incremental account predicts the unconditional
+inference from an inverse-order sentence, and every account predicts the conditional inference
+otherwise. -/
+TheoremDoc Eval.Presupposition.ChemlaSchlenker2012.predicted_eq as "predicted_eq" in "Data"
+
+/-- `observed_experiment1 k o`: in Experiment 1, participants endorsed the conditional inference
+more in every tested cell. The canonical *unless*-sentence was not tested. -/
+TheoremDoc Eval.Presupposition.ChemlaSchlenker2012.observed_experiment1 as
+  "observed_experiment1" in "Data"
 
 /-- The verdict of an account on a cell of Chemla and Schlenker's Experiment 1: silent on the
 untested canonical *unless*-sentence, wrong for an incremental account on an inverse-order
