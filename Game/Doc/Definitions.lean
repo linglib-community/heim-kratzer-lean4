@@ -3,7 +3,7 @@ import Linglib.Logic.Trivalent.Basic
 import Eval.Presupposition.Account
 
 /-- The three truth values: `1` is true, `0` is undefined, `-1` is false, ordered
-`-1 < 0 < 1`. Strong Kleene conjunction is the minimum `⊓`, disjunction the maximum `⊔`, and
+`-1 < 0 < 1`. Strong Kleene conjunction is the minimum `min`, disjunction the maximum `max`, and
 negation `-` exchanges `1` and `-1` and fixes `0`. -/
 DefinitionDoc SignType as "SignType"
 

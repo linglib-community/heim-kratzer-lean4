@@ -15,11 +15,11 @@ The tactic `rfl` closes such a goal. Type `rfl` and press Execute.
 "
 
 /-- The conjunction of a true and an undefined sentence is undefined. -/
-Statement : (1 : SignType) ⊓ 0 = 0 := by
+Statement : min (1 : SignType) 0 = 0 := by
   rfl
 
 Conclusion "
-Lean evaluated `1 ⊓ 0`, found `0`, and accepted the proof.
+Lean evaluated `min 1 0`, found `0`, and accepted the proof.
 "
 
 NewTactic rfl

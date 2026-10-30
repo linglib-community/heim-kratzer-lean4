@@ -2,11 +2,12 @@ import GameServer
 import Eval.Presupposition.ChemlaSchlenker2012
 import Lab.Colinguistics.QuantifiedLimitedSymmetry
 
-/-- `inf_comm a b : a ⊓ b = b ⊓ a`, in every lattice. -/
+/-- `inf_comm a b : a ⊓ b = b ⊓ a`, in every lattice. On a linear order such as `SignType`, Lean
+displays `a ⊓ b` as `min a b`. -/
 TheoremDoc inf_comm as "inf_comm" in "Lattice"
 
-/-- `inf_assoc a b c : a ⊓ b ⊓ c = a ⊓ (b ⊓ c)`, in every lattice. Lean reads `a ⊓ b ⊓ c` as
-`(a ⊓ b) ⊓ c`. -/
+/-- `inf_assoc a b c : a ⊓ b ⊓ c = a ⊓ (b ⊓ c)`, in every lattice, where `a ⊓ b ⊓ c` means
+`(a ⊓ b) ⊓ c`. On `SignType` this reads `min (min a b) c = min a (min b c)`. -/
 TheoremDoc inf_assoc as "inf_assoc" in "Lattice"
 
 /-- `neg_neg a : -(-a) = a`: double negation, for every involutive negation. -/

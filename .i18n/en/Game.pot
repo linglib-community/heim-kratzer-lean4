@@ -11,7 +11,7 @@ msgstr "Project-Id-Version: Game v4.35.0\n"
 "X-Poedit-SearchPath-0: ."
 
 #. §0: `¬`
-#. §1: `a ⊔ -a = 1`
+#. §1: `max a (-a) = 1`
 #. §2: `a`
 #. §3: `decide`
 #: Game/Levels/TruthTables/L05_ExcludedMiddle.lean:8
@@ -65,7 +65,7 @@ msgstr ""
 msgid "A conjunction is false iff one of its conjuncts is false."
 msgstr ""
 
-#: Game/Levels/OrderMatters/L06_ThreeConjunctions.lean:28
+#: Game/Levels/OrderMatters/L06_ThreeConjunctions.lean:29
 msgid "A conjunction that is undefined more often projects more presuppositions. Read as theories of\n"
 "projection, Weak Kleene predicts that the presupposition of either conjunct always projects,\n"
 "Middle Kleene that the left conjunct can satisfy the presupposition of the right one, and Strong\n"
@@ -98,7 +98,7 @@ msgstr ""
 msgid "A doubly negated conjunction has the value of the conjunction in the other order."
 msgstr ""
 
-#: Game/Levels/OrderMatters/L01_FalsityFirst.lean:14
+#: Game/Levels/OrderMatters/L01_FalsityFirst.lean:15
 msgid "A false conjunct followed by an undefined one gives a false conjunction."
 msgstr ""
 
@@ -127,8 +127,8 @@ msgid "A generalization is refuted by a counterexample, and the last two levels 
 msgstr ""
 
 #. §0: `decide`
-#. §1: `a ⊓ b`
-#. §2: `b ⊓ a`
+#. §1: `min a b`
+#. §2: `min b a`
 #. §3: `rfl`
 #. §4: `a`
 #. §5: `b`
@@ -166,7 +166,7 @@ msgstr ""
 msgid "A symmetric theory"
 msgstr ""
 
-#: Game/Levels/OrderMatters/L02_UndefinednessFirst.lean:15
+#: Game/Levels/OrderMatters/L02_UndefinednessFirst.lean:16
 msgid "An undefined conjunct followed by a false one gives an undefined conjunction."
 msgstr ""
 
@@ -277,7 +277,7 @@ msgid "Heim's context change potentials and Peters's filtering connectives predi
 "presuppositions."
 msgstr ""
 
-#: Game/Doc/Theorems.lean:15
+#: Game/Doc/Theorems.lean:16
 msgid "Heim's context change potentials predict presuppositions at least as strong as Peters's\n"
 "filtering connectives."
 msgstr ""
@@ -290,12 +290,12 @@ msgid "Heim's dynamic semantics and Peters's filtering connectives predict the s
 "close each goal with §1 and an edge from the inventory."
 msgstr ""
 
-#: Game/Levels/OrderMatters/L05_WeakKleene.lean:16
+#: Game/Levels/OrderMatters/L05_WeakKleene.lean:17
 msgid "In Weak Kleene logic, a false conjunct followed by an undefined one gives an undefined\n"
 "conjunction."
 msgstr ""
 
-#: Game/Doc/Theorems.lean:33
+#: Game/Doc/Theorems.lean:34
 msgid "Incremental Transparency predicts presuppositions at least as strong as Kalomoiros's Limited\n"
 "Symmetry."
 msgstr ""
@@ -335,7 +335,7 @@ msgstr ""
 msgid "Laws, not tables"
 msgstr ""
 
-#. §0: `1 ⊓ 0`
+#. §0: `min 1 0`
 #. §1: `0`
 #: Game/Levels/TruthTables/L01_TrueAndUndefined.lean:21
 msgid "Lean evaluated §0, found §1, and accepted the proof."
@@ -385,11 +385,14 @@ msgid "Linglib registers eleven theories of presupposition projection over a sha
 msgstr ""
 
 #. §0: `inf_comm a b : a ⊓ b = b ⊓ a`
-#. §1: `exact`
-#. §2: `exact inf_comm a b`
+#. §1: `SignType`
+#. §2: `min a b = min b a`
+#. §3: `exact`
+#. §4: `exact inf_comm a b`
 #: Game/Levels/Laws/L01_Commutativity.lean:8
-msgid "Mathlib proves §0 once, for every lattice. The tactic §1 closes a\n"
-"goal with a proof of exactly that goal. Type §2."
+msgid "Mathlib proves §0 once, for every lattice; on §1 it says\n"
+"§2. The tactic §3 closes a goal with a proof of exactly that goal. Type\n"
+"§4."
 msgstr ""
 
 #. §0: `meetMiddle (-1) 0 = -1`
@@ -400,7 +403,7 @@ msgid "Middle Kleene conjunction (Peters 1979): an undefined left conjunct makes
 "§1."
 msgstr ""
 
-#: Game/Levels/OrderMatters/L03_Counterexample.lean:20
+#: Game/Levels/OrderMatters/L03_Counterexample.lean:21
 msgid "Middle Kleene conjunction is not commutative."
 msgstr ""
 
@@ -419,7 +422,7 @@ msgstr ""
 
 #. §0: `«{h}»`
 #. §1: `specialize «{h}» (-1) 0`
-#: Game/Levels/OrderMatters/L03_Counterexample.lean:23
+#: Game/Levels/OrderMatters/L03_Counterexample.lean:24
 msgid "Now §0 says that every pair of values commutes. Instantiate it at the counterexample:\n"
 "§1."
 msgstr ""
@@ -435,7 +438,7 @@ msgstr ""
 msgid "Order matters"
 msgstr ""
 
-#: Game/Doc/Theorems.lean:20
+#: Game/Doc/Theorems.lean:21
 msgid "Peters's filtering connectives predict presuppositions at least as strong as Heim's context\n"
 "change potentials."
 msgstr ""
@@ -481,7 +484,7 @@ msgid "Schlenker's incremental Transparency makes no use of context change poten
 "presuppositions at least as strong as Peters's filtering in this fragment."
 msgstr ""
 
-#: Game/Doc/Theorems.lean:28
+#: Game/Doc/Theorems.lean:29
 msgid "Schlenker's incremental Transparency predicts presuppositions at least as strong as Heim's\n"
 "context change potentials."
 msgstr ""
@@ -513,7 +516,7 @@ msgid "Strong Kleene conjunction is commutative, so a false conjunct rescues an 
 msgstr ""
 
 #: Game/Levels/TruthTables/L04_EveryRow.lean:18
-#: Game/Levels/Laws/L01_Commutativity.lean:13
+#: Game/Levels/Laws/L01_Commutativity.lean:14
 msgid "Strong Kleene conjunction is commutative."
 msgstr ""
 
@@ -522,12 +525,12 @@ msgid "Symmetric Transparency does not predict presuppositions as strong as incr
 "Transparency."
 msgstr ""
 
-#: Game/Doc/Theorems.lean:38
+#: Game/Doc/Theorems.lean:39
 msgid "Symmetric Transparency is not stronger than Limited Symmetry: some context accepts a sentence\n"
 "by the first and rejects it by the second."
 msgstr ""
 
-#: Game/Levels/OrderMatters/L04_DefinedLeft.lean:19
+#: Game/Levels/OrderMatters/L04_DefinedLeft.lean:20
 msgid "The asymmetry lies entirely in the left conjunct. A false left conjunct rescues an undefined right\n"
 "one, but a false right conjunct does not rescue an undefined left one."
 msgstr ""
@@ -558,7 +561,7 @@ msgid "The dynamic theory states acceptance with context change potentials, and 
 msgstr ""
 
 #. §0: `0`
-#. §1: `0 ⊔ -0 = 0 ⊔ 0 = 0`
+#. §1: `max 0 (-0) = max 0 0 = 0`
 #: Game/Levels/TruthTables/L05_ExcludedMiddle.lean:19
 msgid "The failing value is §0, since §1."
 msgstr ""
@@ -580,7 +583,7 @@ msgstr ""
 msgid "The negation of an undefined sentence is undefined."
 msgstr ""
 
-#: Game/Levels/OrderMatters/L03_Counterexample.lean:30
+#: Game/Levels/OrderMatters/L03_Counterexample.lean:31
 msgid "The order of the conjuncts matters to Middle Kleene conjunction, as it matters to presupposition\n"
 "filtering."
 msgstr ""
@@ -624,8 +627,8 @@ msgstr ""
 #. §1: `0`
 #. §2: `-1`
 #. §3: `-1 < 0 < 1`
-#. §4: `⊓`
-#. §5: `⊔`
+#. §4: `min`
+#. §5: `max`
 #. §6: `-`
 #. §7: `1`
 #. §8: `-1`
@@ -649,13 +652,13 @@ msgid "The two verdicts differ in the accommodation rule that links the theory t
 "unpublished extension from §2."
 msgstr ""
 
-#: Game/Doc/Theorems.lean:43
+#: Game/Doc/Theorems.lean:44
 msgid "The verdict of an account on a cell of Chemla and Schlenker's Experiment 1: silent on the\n"
 "untested canonical *unless*-sentence, wrong for an incremental account on an inverse-order\n"
 "sentence, and correct otherwise."
 msgstr ""
 
-#: Game/Doc/Theorems.lean:49
+#: Game/Doc/Theorems.lean:50
 msgid "The verdict on Limited Symmetry, extended to quantified sentences, in Chemla's (2009)\n"
 "Experiment 1: wrong when every presupposition is accommodated in the context, and correct\n"
 "otherwise."
@@ -665,7 +668,7 @@ msgstr ""
 msgid "Theories meet data"
 msgstr ""
 
-#: Game/Levels/OrderMatters/L06_ThreeConjunctions.lean:24
+#: Game/Levels/OrderMatters/L06_ThreeConjunctions.lean:25
 msgid "This goal has finitely many cases."
 msgstr ""
 
@@ -676,7 +679,7 @@ msgid "This is the falsity condition of Strong Kleene conjunction, and its truth
 msgstr ""
 
 #. §0: `decide`
-#: Game/Levels/Laws/L01_Commutativity.lean:17
+#: Game/Levels/Laws/L01_Commutativity.lean:18
 msgid "This is the law that §0 checked in the previous world, now taken from the theory of lattices\n"
 "instead of a truth table."
 msgstr ""
@@ -709,7 +712,7 @@ msgstr ""
 msgid "Weak Kleene"
 msgstr ""
 
-#: Game/Levels/OrderMatters/L06_ThreeConjunctions.lean:19
+#: Game/Levels/OrderMatters/L06_ThreeConjunctions.lean:20
 msgid "Weak Kleene conjunction is defined less often than Middle Kleene conjunction, which is defined\n"
 "less often than Strong Kleene conjunction."
 msgstr ""
@@ -723,8 +726,8 @@ msgstr ""
 #. §2: `-1`
 #. §3: `0`
 #. §4: `-1 < 0 < 1`
-#. §5: `⊓`
-#. §6: `⊔`
+#. §5: `min a b`
+#. §6: `max a b`
 #. §7: `-`
 #. §8: `1`
 #. §9: `-1`
@@ -736,22 +739,21 @@ msgid "When a presupposition fails, as in *the king of France is bald*, a trival
 "Linglib represents the three values with §0, a type from Lean's mathematics library\n"
 "mathlib: §1 is true, §2 is false, and §3 is undefined. They are ordered §4, falsity\n"
 "below undefinedness below truth. In this order Kleene's strong conjunction is the minimum of its\n"
-"arguments, written §5, and his strong disjunction is the maximum, written §6. Negation, written\n"
-"§7, exchanges §8 and §9 and leaves §10 where it is."
+"arguments, §5, and his strong disjunction is the maximum, §6. Negation, written §7,\n"
+"exchanges §8 and §9 and leaves §10 where it is."
 msgstr ""
 
 #. §0: `inf_assoc a b c`
-#. §1: `a ⊓ b ⊓ c = a ⊓ (b ⊓ c)`
-#. §2: `a ⊓ b ⊓ c`
-#. §3: `(a ⊓ b) ⊓ c`
-#. §4: `rw [inf_assoc]`
-#. §5: `rw`
+#. §1: `SignType`
+#. §2: `min (min a b) c = min a (min b c)`
+#. §3: `rw [inf_assoc]`
+#. §4: `rw`
 #: Game/Levels/Laws/L03_Rewriting.lean:8
 msgid "When the goal is not literally an instance of a law, rewrite it. §0 states\n"
-"associativity, §1, where Lean reads §2 as §3.\n"
+"associativity, which on §1 reads §2.\n"
 "\n"
-"The tactic §4 finds an instance of the left-hand side in the goal and replaces it by\n"
-"the right-hand side. When the two sides of the goal become identical, §5 closes it."
+"The tactic §3 finds an instance of the left-hand side in the goal and replaces it by\n"
+"the right-hand side. When the two sides of the goal become identical, §4 closes it."
 msgstr ""
 
 #. §0: `use .ifSentence, .inverse`
@@ -760,7 +762,7 @@ msgid "Which cell refutes an incremental account? Supply its construction and or
 "§0."
 msgstr ""
 
-#: Game/Levels/OrderMatters/L04_DefinedLeft.lean:15
+#: Game/Levels/OrderMatters/L04_DefinedLeft.lean:16
 msgid "With a defined left conjunct, Middle Kleene conjunction is Strong Kleene conjunction."
 msgstr ""
 
@@ -768,7 +770,7 @@ msgstr ""
 msgid "With a false left conjunct, Middle Kleene conjunction is false, as Strong Kleene conjunction is."
 msgstr ""
 
-#. §0: `0 ⊓ -1 = -1`
+#. §0: `min 0 (-1) = -1`
 #: Game/Levels/OrderMatters/L02_UndefinednessFirst.lean:8
 msgid "With an undefined left conjunct, Middle Kleene conjunction is undefined, even though the right\n"
 "conjunct is false. Strong Kleene conjunction gives §0 here."
@@ -828,7 +830,7 @@ msgstr ""
 #. §0: `exact e`
 #. §1: `e`
 #. §2: `exact inf_comm a b`
-#. §3: `a ⊓ b = b ⊓ a`
+#. §3: `min a b = min b a`
 #: Game/Doc/Tactics.lean:12
 msgid "§0 closes the goal when §1 is a proof of exactly that goal. For example,\n"
 "§2 proves §3."
@@ -875,7 +877,7 @@ msgstr ""
 #. §0: `«{h}»`
 #. §1: `meetMiddle (-1) 0 = meetMiddle 0 (-1)`
 #. §2: `simp at «{h}»`
-#: Game/Levels/OrderMatters/L03_Counterexample.lean:26
+#: Game/Levels/OrderMatters/L03_Counterexample.lean:27
 msgid "§0 now claims §1. Compute both sides with\n"
 "§2."
 msgstr ""
@@ -959,31 +961,40 @@ msgstr ""
 #. §1: `SignType`
 #. §2: `⊓`
 #. §3: `SignType`
+#. §4: `min`
+#. §5: `⊓`
 #: Game/Levels/Laws.lean:9
 msgid "§0 works because §1 has three elements. A classical proposition is a set of possible\n"
 "worlds, and nothing bounds how many worlds there are, so no truth table lists every proposition.\n"
 "Facts about propositions are proved from laws instead.\n"
 "\n"
-"The laws here are those of a lattice. Strong Kleene conjunction is the meet §2 of the order on\n"
-"§3, and the intersection of two propositions is the meet of the order on sets of worlds,\n"
-"so the same laws, with the same proofs, hold of both."
-msgstr ""
-
-#. §0: `inf_comm a b : a ⊓ b = b ⊓ a`
-#: Game/Doc/Theorems.lean:5
-msgid "§0, in every lattice."
+"The laws here are those of a lattice, whose meet mathlib writes §2. Strong Kleene conjunction is\n"
+"the meet of the order on §3, which Lean displays as §4 because that order is linear.\n"
+"The intersection of two propositions is the meet of the order on sets of worlds, displayed as §5.\n"
+"The same laws, with the same proofs, hold of both."
 msgstr ""
 
 #. §0: `inf_assoc a b c : a ⊓ b ⊓ c = a ⊓ (b ⊓ c)`
 #. §1: `a ⊓ b ⊓ c`
 #. §2: `(a ⊓ b) ⊓ c`
-#: Game/Doc/Theorems.lean:8
-msgid "§0, in every lattice. Lean reads §1 as\n"
-"§2."
+#. §3: `SignType`
+#. §4: `min (min a b) c = min a (min b c)`
+#: Game/Doc/Theorems.lean:9
+msgid "§0, in every lattice, where §1 means\n"
+"§2. On §3 this reads §4."
+msgstr ""
+
+#. §0: `inf_comm a b : a ⊓ b = b ⊓ a`
+#. §1: `SignType`
+#. §2: `a ⊓ b`
+#. §3: `min a b`
+#: Game/Doc/Theorems.lean:5
+msgid "§0, in every lattice. On a linear order such as §1, Lean\n"
+"displays §2 as §3."
 msgstr ""
 
 #. §0: `Account.Stronger.trans : a.Stronger b → b.Stronger c → a.Stronger c`
-#: Game/Doc/Theorems.lean:25
+#: Game/Doc/Theorems.lean:26
 msgid "§0."
 msgstr ""
 
@@ -998,6 +1009,6 @@ msgid "§0: account §1 predicts presuppositions at least as strong as account �
 msgstr ""
 
 #. §0: `neg_neg a : -(-a) = a`
-#: Game/Doc/Theorems.lean:12
+#: Game/Doc/Theorems.lean:13
 msgid "§0: double negation, for every involutive negation."
 msgstr ""

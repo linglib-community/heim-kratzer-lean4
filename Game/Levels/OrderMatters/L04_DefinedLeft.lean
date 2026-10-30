@@ -11,9 +11,10 @@ statement uses `≠` for *is not equal to* and `→` for *if ... then*.
 "
 
 open SignType
+set_option pp.fieldNotation.generalized false
 
 /-- With a defined left conjunct, Middle Kleene conjunction is Strong Kleene conjunction. -/
-Statement : ∀ a b : SignType, a ≠ 0 → meetMiddle a b = a ⊓ b := by
+Statement : ∀ a b : SignType, a ≠ 0 → meetMiddle a b = min a b := by
   decide
 
 Conclusion "

@@ -10,7 +10,7 @@ object it cannot enumerate, such as a variable in the context or a set of worlds
 TacticDoc decide
 
 /-- `exact e` closes the goal when `e` is a proof of exactly that goal. For example,
-`exact inf_comm a b` proves `a ⊓ b = b ⊓ a`. -/
+`exact inf_comm a b` proves `min a b = min b a`. -/
 TacticDoc exact
 
 /-- `rw [h]` rewrites the goal with an equation `h : x = y`, replacing instances of `x` by `y`,

@@ -15,6 +15,6 @@ sentence a third value besides truth and falsity.
 Linglib represents the three values with `SignType`, a type from Lean's mathematics library
 mathlib: `1` is true, `-1` is false, and `0` is undefined. They are ordered `-1 < 0 < 1`, falsity
 below undefinedness below truth. In this order Kleene's strong conjunction is the minimum of its
-arguments, written `⊓`, and his strong disjunction is the maximum, written `⊔`. Negation, written
-`-`, exchanges `1` and `-1` and leaves `0` where it is.
+arguments, `min a b`, and his strong disjunction is the maximum, `max a b`. Negation, written `-`,
+exchanges `1` and `-1` and leaves `0` where it is.
 "

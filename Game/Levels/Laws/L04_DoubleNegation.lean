@@ -11,7 +11,7 @@ itself. `rw [neg_neg, inf_comm]` rewrites with each law in turn.
 "
 
 /-- A doubly negated conjunction has the value of the conjunction in the other order. -/
-Statement (a b : SignType) : -(-(a ⊓ b)) = b ⊓ a := by
+Statement (a b : SignType) : -(-(min a b)) = min b a := by
   Hint "Rewrite with `neg_neg` first, then with `inf_comm`."
   rw [neg_neg]
   Hint "Now the goal is commutativity, an instance of `inf_comm`."

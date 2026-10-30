@@ -12,6 +12,7 @@ a conjunction is undefined as soon as either conjunct is. Linglib defines this c
 "
 
 open SignType
+set_option pp.fieldNotation.generalized false
 
 /-- In Weak Kleene logic, a false conjunct followed by an undefined one gives an undefined
 conjunction. -/

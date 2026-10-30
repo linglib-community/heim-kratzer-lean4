@@ -15,11 +15,12 @@ which you then prove in turn.
 "
 
 open SignType
+set_option pp.fieldNotation.generalized false
 
 /-- Weak Kleene conjunction is defined less often than Middle Kleene conjunction, which is defined
 less often than Strong Kleene conjunction. -/
 Statement : (∀ a b : SignType, meetWeak a b ≠ 0 → meetMiddle a b ≠ 0) ∧
-    (∀ a b : SignType, meetMiddle a b ≠ 0 → a ⊓ b ≠ 0) := by
+    (∀ a b : SignType, meetMiddle a b ≠ 0 → min a b ≠ 0) := by
   constructor
   · Hint "This goal has finitely many cases."
     decide

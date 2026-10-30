@@ -6,12 +6,13 @@ Level 1
 Title "Commutativity"
 
 Introduction "
-Mathlib proves `inf_comm a b : a ⊓ b = b ⊓ a` once, for every lattice. The tactic `exact` closes a
-goal with a proof of exactly that goal. Type `exact inf_comm a b`.
+Mathlib proves `inf_comm a b : a ⊓ b = b ⊓ a` once, for every lattice; on `SignType` it says
+`min a b = min b a`. The tactic `exact` closes a goal with a proof of exactly that goal. Type
+`exact inf_comm a b`.
 "
 
 /-- Strong Kleene conjunction is commutative. -/
-Statement (a b : SignType) : a ⊓ b = b ⊓ a := by
+Statement (a b : SignType) : min a b = min b a := by
   exact inf_comm a b
 
 Conclusion "

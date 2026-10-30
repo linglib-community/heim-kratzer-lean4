@@ -11,12 +11,12 @@ variables has nine rows in its truth table, few enough for Lean to check them al
 `decide` does this: it evaluates a statement about finitely many cases and closes the goal when
 every case comes out true.
 
-The law below is commutativity: `a ⊓ b` and `b ⊓ a` agree for every pair of values. `rfl` cannot
+The law below is commutativity: `min a b` and `min b a` agree for every pair of values. `rfl` cannot
 prove it, since with `a` and `b` unknown there is nothing to compute.
 "
 
 /-- Strong Kleene conjunction is commutative. -/
-Statement : ∀ a b : SignType, a ⊓ b = b ⊓ a := by
+Statement : ∀ a b : SignType, min a b = min b a := by
   decide
 
 Conclusion "

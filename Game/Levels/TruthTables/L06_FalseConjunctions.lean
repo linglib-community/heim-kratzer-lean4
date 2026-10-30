@@ -11,7 +11,7 @@ uses `↔` for *if and only if* and `∨` for *or*.
 "
 
 /-- A conjunction is false iff one of its conjuncts is false. -/
-Statement : ∀ a b : SignType, a ⊓ b = -1 ↔ a = -1 ∨ b = -1 := by
+Statement : ∀ a b : SignType, min a b = -1 ↔ a = -1 ∨ b = -1 := by
   decide
 
 Conclusion "

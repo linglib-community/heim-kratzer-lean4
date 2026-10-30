@@ -11,7 +11,8 @@ Introduction "
 worlds, and nothing bounds how many worlds there are, so no truth table lists every proposition.
 Facts about propositions are proved from laws instead.
 
-The laws here are those of a lattice. Strong Kleene conjunction is the meet `⊓` of the order on
-`SignType`, and the intersection of two propositions is the meet of the order on sets of worlds,
-so the same laws, with the same proofs, hold of both.
+The laws here are those of a lattice, whose meet mathlib writes `⊓`. Strong Kleene conjunction is
+the meet of the order on `SignType`, which Lean displays as `min` because that order is linear.
+The intersection of two propositions is the meet of the order on sets of worlds, displayed as `⊓`.
+The same laws, with the same proofs, hold of both.
 "

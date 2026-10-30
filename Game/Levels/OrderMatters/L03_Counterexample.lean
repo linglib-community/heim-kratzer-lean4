@@ -16,6 +16,7 @@ conjunction is not commutative. This time prove it without `decide`, in three st
 "
 
 open SignType
+set_option pp.fieldNotation.generalized false
 
 /-- Middle Kleene conjunction is not commutative. -/
 Statement : ¬ ∀ a b : SignType, meetMiddle a b = meetMiddle b a := by

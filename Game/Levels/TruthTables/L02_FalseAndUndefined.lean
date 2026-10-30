@@ -12,7 +12,7 @@ value is `-1`.
 "
 
 /-- The conjunction of a false and an undefined sentence is false. -/
-Statement : (-1 : SignType) ⊓ 0 = -1 := by
+Statement : min (-1 : SignType) 0 = -1 := by
   rfl
 
 Conclusion "
