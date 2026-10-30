@@ -12,7 +12,7 @@ def LocalGameServer : Dependency := {
   name := `GameServer
   scope := "hhu-adam"
   src? := DependencySrc.path "../lean4game/server"
-  version? := none
+  version := .none
   opts := ∅
 }
 
@@ -24,7 +24,7 @@ def RemoteGameServer : Dependency := {
   name := `GameServer
   scope := "hhu-adam"
   src? := DependencySrc.git "https://github.com/leanprover-community/lean4game.git" leanVersion "server"
-  version? := s!"git#{leanVersion}"
+  version := .git leanVersion
   opts := ∅
 }
 
@@ -52,6 +52,11 @@ require "leanprover-community" / mathlib @ git leanVersion
  -/
 
 -- require "leanprover-community" / mathlib @ git leanVersion
+
+/-- linglib, at a commit that has `Eval/Presupposition` and `Lab/Colinguistics`. Mathlib comes
+with it, at the revision linglib pins. -/
+require linglib from git
+  "https://github.com/linglib-community/linglib" @ "d4d49fc2d416f9c986610584e64e8fac823608f6"
 
 /-!
 # PACKAGE CONFIGURATION

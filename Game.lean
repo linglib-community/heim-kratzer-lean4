@@ -1,28 +1,36 @@
-import Game.Levels.DemoWorld
+import Game.Levels.TruthTables
+import Game.Levels.Laws
+import Game.Levels.OrderMatters
+import Game.Levels.Map
+import Game.Levels.Data
 
--- Here's what we'll put on the title screen
-Title "Hello World Game"
-Introduction
-"
-This text appears on the starting page where one selects the world/level to play.
-You can use **markdown**.
+Title "Three-Valued Semantics"
+
+Introduction "
+A sentence whose presupposition fails, such as *the king of France is bald*, is neither true nor
+false in a trivalent semantics. This game introduces the proof assistant Lean through that idea.
+The first three worlds work with three truth values and the conjunctions that combine them; the
+last two compare theories of presupposition projection with each other and with an experiment.
+
+Every definition and theorem in the game comes from linglib, a Lean library of formal
+linguistics, so the objects you prove things about are the ones its analyses use.
+
+Click on a world to start.
 "
 
 Info "
-Here you can put additional information about the game. It is accessible
-from the starting through the drop-down menu.
+Built on [linglib](https://github.com/linglib-community/linglib) with
+[lean4game](https://github.com/leanprover-community/lean4game).
 
-For example: Game version, Credits, Link to Github and Zulip, etc.
-
-Use **markdown**.
+Sources: Kleene (1952), Bochvar (1938), Peters (1979), Heim (1983), Schlenker (2009), Chemla
+(2009), Chemla and Schlenker (2012), Kalomoiros (2023).
 "
 
-/-! Information to be displayed on the servers landing page. -/
 Languages "en"
-CaptionShort "Game Template"
-CaptionLong "You should use this game as a template for your own game and add your own levels."
--- Prerequisites "" -- add this if your game depends on other games
--- CoverImage "images/cover.png"
+CaptionShort "Presupposition, truth values and proof"
+CaptionLong "Learn Lean through trivalent semantics, then compare theories of presupposition
+projection with each other and score them against experimental data."
 
-/-! Build the game. Show's warnings if it found a problem with your game. -/
+Dependency TruthTables → Laws → OrderMatters → Map → Data
+
 MakeGame
