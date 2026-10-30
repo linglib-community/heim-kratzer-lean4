@@ -1,10 +1,37 @@
-# Game Skeleton
+# Three-Valued Semantics
 
-This is a template for creating a game with [lean4game](https://github.com/leanprover-community/lean4game/). It contains a single Level plus the files needed for a local development setup.
+A [lean4game](https://github.com/leanprover-community/lean4game) that teaches Lean through trivalent
+semantics and presupposition projection. Every definition and theorem it uses comes from
+[linglib](https://github.com/linglib-community/linglib).
 
-The documentation about how to use this template are at the [lean4game repository](https://github.com/leanprover-community/lean4game/):
+| World | Content | Tactics |
+| --- | --- | --- |
+| Truth tables | Strong Kleene values on `SignType` | `rfl`, `decide` |
+| Laws, not tables | lattice laws for Strong Kleene and classical conjunction | `exact`, `rw` |
+| Order matters | Middle Kleene (Peters 1979) and Weak Kleene conjunction | `intro`, `specialize`, `simp`, `constructor` |
+| A map of theories | comparisons between linglib's eleven projection accounts | `apply` |
+| Theories meet data | Chemla and Schlenker (2012), and the unpublished extension of Limited Symmetry in `Lab` | `use` |
 
-* [Creating a new game](https://github.com/leanprover-community/lean4game/blob/main/doc/create_game.md)
-  * [Updating an existing game](https://github.com/leanprover-community/lean4game/blob/main/doc/update_game.md)
-  * [Running a game locally](https://github.com/leanprover-community/lean4game/blob/main/doc/running_locally.md)
+## Building
 
+The game requires linglib at a pinned commit (see `lakefile.lean`), and mathlib comes with it.
+
+```bash
+lake update -R
+lake exe cache get   # mathlib's compiled files
+lake build
+```
+
+To play locally, clone `lean4game` next to this folder and run `npm install && npm start` in it, then
+open http://localhost:3000/#/g/local/heim-kratzer-lean4. See lean4game's
+[running locally](https://github.com/leanprover-community/lean4game/blob/main/doc/running_locally.md).
+
+## Publishing
+
+A push to `main` runs `.github/workflows/build.yml`, which builds the game and uploads it as an
+artifact. Then open https://adam.math.hhu.de/import/trigger/linglib-community/heim-kratzer-lean4 to
+import it into the game server; it is then playable at
+https://adam.math.hhu.de/#/g/linglib-community/heim-kratzer-lean4.
+
+To move to a newer linglib, update the commit in `lakefile.lean` and run `lake update linglib`. The
+game's toolchain must match linglib's and have a matching `lean4game` tag.
