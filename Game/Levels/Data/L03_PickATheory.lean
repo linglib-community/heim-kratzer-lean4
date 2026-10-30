@@ -13,14 +13,13 @@ The verdict then sits under `∀`, where `rw` cannot reach it. `simp only [verdi
 rewrites under binders, and `decide` then checks every cell of the design.
 "
 
-open Eval.Presupposition Account Eval.Presupposition.ChemlaSchlenker2012
+open Eval Eval.Presupposition Account Eval.Presupposition.ChemlaSchlenker2012
+  _root_.ChemlaSchlenker2012
 
 /-- Some account is wrong on no cell of Experiment 1. -/
 Statement : ∃ a : Account, ∀ k o, experiment1.verdict a.theory (k, o) ≠ .wrong := by
-  Branch
-    use dynamic
-    Hint "The dynamic theory is incremental, so `decide` will find the inverse-order cells where
-    it is wrong. Try a symmetric account."
+  Hint "Choose with the inverse-order cells in mind. If you choose an incremental account, such
+  as `dynamic`, `decide` will report that the claim is false."
   use .kleeneSymmetric
   simp only [verdict_experiment1]
   decide

@@ -20,7 +20,7 @@ Transparency derives in one step, it predicts the difference.
 `Lab.Colinguistics.verdict_chemla2009a` gives the verdict for each way of accommodating.
 "
 
-open Eval.Presupposition Lab.Colinguistics
+open Eval Eval.Presupposition Lab.Colinguistics
 
 /-- Extended to quantified sentences, Limited Symmetry is wrong on Chemla's (2009) Experiment 1
 with every presupposition accommodated in the context, and right with one-step accommodation. -/

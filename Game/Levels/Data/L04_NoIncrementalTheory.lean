@@ -11,7 +11,8 @@ introduce an account `a` and the hypothesis `ha` that it is incremental, `use` t
 refutes it, rewrite the verdict, and let `simp` finish with `simp [ha]`.
 "
 
-open Eval.Presupposition Account Eval.Presupposition.ChemlaSchlenker2012
+open Eval Eval.Presupposition Account Eval.Presupposition.ChemlaSchlenker2012
+  _root_.ChemlaSchlenker2012
 
 /-- Every incremental account is wrong on some cell of Experiment 1. -/
 Statement : ∀ a ∈ incremental, ∃ k o, experiment1.verdict a.theory (k, o) = .wrong := by

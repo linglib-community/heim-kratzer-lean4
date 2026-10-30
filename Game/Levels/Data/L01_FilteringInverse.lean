@@ -10,7 +10,8 @@ Introduction "
 After `rw [verdict_experiment1]` that condition can be checked with `decide`.
 "
 
-open Eval.Presupposition Account Eval.Presupposition.ChemlaSchlenker2012
+open Eval Eval.Presupposition Account Eval.Presupposition.ChemlaSchlenker2012
+  _root_.ChemlaSchlenker2012
 
 /-- Peters's filtering is wrong on the inverse-order *if*-sentence. -/
 Statement : experiment1.verdict filtering.theory (.ifSentence, .inverse) = .wrong := by

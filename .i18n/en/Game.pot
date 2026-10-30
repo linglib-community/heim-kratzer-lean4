@@ -191,6 +191,13 @@ msgstr ""
 msgid "Chain §0 with the edge §1."
 msgstr ""
 
+#. §0: `dynamic`
+#. §1: `decide`
+#: Game/Levels/Data/L03_PickATheory.lean:21
+msgid "Choose with the inverse-order cells in mind. If you choose an incremental account, such\n"
+"as §0, §1 will report that the claim is false."
+msgstr ""
+
 #: Game/Levels/Laws/L02_Propositions.lean:14
 msgid "Classical conjunction of propositions is commutative."
 msgstr ""
@@ -207,7 +214,7 @@ msgstr ""
 msgid "Double negation"
 msgstr ""
 
-#: Game/Levels/Data/L04_NoIncrementalTheory.lean:16
+#: Game/Levels/Data/L04_NoIncrementalTheory.lean:17
 msgid "Every incremental account is wrong on some cell of Experiment 1."
 msgstr ""
 
@@ -215,7 +222,7 @@ msgstr ""
 msgid "Every row"
 msgstr ""
 
-#: Game/Levels/Data/L03_PickATheory.lean:28
+#: Game/Levels/Data/L03_PickATheory.lean:27
 msgid "Every symmetric account survives Experiment 1, and so does Limited Symmetry, which checks the\n"
 "presupposition at the end of the sentence as well as after the trigger."
 msgstr ""
@@ -249,7 +256,7 @@ msgstr ""
 msgid "Filtering in the inverse order"
 msgstr ""
 
-#: Game/Levels/Data/L01_FilteringInverse.lean:20
+#: Game/Levels/Data/L01_FilteringInverse.lean:21
 msgid "Filtering predicts the unconditional inference here, and participants preferred the conditional\n"
 "one."
 msgstr ""
@@ -443,7 +450,7 @@ msgid "Peters's filtering connectives predict presuppositions at least as strong
 "change potentials."
 msgstr ""
 
-#: Game/Levels/Data/L01_FilteringInverse.lean:15
+#: Game/Levels/Data/L01_FilteringInverse.lean:16
 msgid "Peters's filtering is wrong on the inverse-order *if*-sentence."
 msgstr ""
 
@@ -489,7 +496,7 @@ msgid "Schlenker's incremental Transparency predicts presuppositions at least as
 "context change potentials."
 msgstr ""
 
-#: Game/Levels/Data/L03_PickATheory.lean:18
+#: Game/Levels/Data/L03_PickATheory.lean:19
 msgid "Some account is wrong on no cell of Experiment 1."
 msgstr ""
 
@@ -548,12 +555,6 @@ msgstr ""
 msgid "The conjunction of a true and an undefined sentence is undefined."
 msgstr ""
 
-#. §0: `decide`
-#: Game/Levels/Data/L03_PickATheory.lean:22
-msgid "The dynamic theory is incremental, so §0 will find the inverse-order cells where\n"
-"it is wrong. Try a symmetric account."
-msgstr ""
-
 #: Game/Levels/Map/L01_HeimAndPeters.lean:23
 msgid "The dynamic theory states acceptance with context change potentials, and the filtering theory with\n"
 "the Middle Kleene truth tables of the last world. The definitions look nothing alike, yet they\n"
@@ -603,11 +604,11 @@ msgid "The symmetric Strong Kleene theory checks definedness for the sentence as
 "after the trigger can satisfy the presupposition."
 msgstr ""
 
-#: Game/Levels/Data/L02_SymmetricInverse.lean:15
+#: Game/Levels/Data/L02_SymmetricInverse.lean:16
 msgid "The symmetric Strong Kleene theory is right on the inverse-order *if*-sentence."
 msgstr ""
 
-#: Game/Levels/Data/L04_NoIncrementalTheory.lean:25
+#: Game/Levels/Data/L04_NoIncrementalTheory.lean:26
 msgid "The theories of the last world that coincide on this fragment, Heim's, Peters's, and incremental\n"
 "Transparency among them, fail together."
 msgstr ""
@@ -757,7 +758,7 @@ msgid "When the goal is not literally an instance of a law, rewrite it. §0 stat
 msgstr ""
 
 #. §0: `use .ifSentence, .inverse`
-#: Game/Levels/Data/L04_NoIncrementalTheory.lean:19
+#: Game/Levels/Data/L04_NoIncrementalTheory.lean:20
 msgid "Which cell refutes an incremental account? Supply its construction and order, as in\n"
 "§0."
 msgstr ""
