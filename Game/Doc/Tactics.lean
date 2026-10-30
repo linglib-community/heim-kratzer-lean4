@@ -1,6 +1,7 @@
 import GameServer
 
-/-- `rfl` closes a goal `a = b` when both sides compute to the same value. -/
+/-- `rfl` closes a goal `a = b` when both sides compute to the same value, and a goal `P ↔ Q`
+when its two sides are the same by definition. -/
 TacticDoc rfl
 
 /-- `decide` closes a goal about finitely many cases by checking every case. It works for
@@ -44,3 +45,7 @@ TacticDoc apply
 /-- `use x` proves a goal `∃ y, P y` by supplying the witness `x`, leaving `P x`. `use x, y`
 supplies two witnesses. -/
 TacticDoc use
+
+/-- `cases w` splits the goal into one goal for each way of building `w`. For a situation of the
+Sentences world, that is one goal each for `noKing`, `hairyKing` and `baldKing`. -/
+TacticDoc cases

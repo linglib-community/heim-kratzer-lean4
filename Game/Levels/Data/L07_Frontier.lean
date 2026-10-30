@@ -1,7 +1,7 @@
 import Game.Metadata
 
 World "Data"
-Level 5
+Level 7
 
 Title "The frontier"
 
@@ -37,9 +37,10 @@ The two verdicts differ in the accommodation rule that links the theory to the d
 theory of projection. Which rule speakers follow is still open, and the scoring makes it explicit
 as a separate assumption.
 
-Everything in this game comes from linglib: the truth values and connectives from
-`Linglib/Logic/Trivalent`, the theories and their comparisons from `Eval/Presupposition`, and the
-unpublished extension from `Lab/Colinguistics`.
+Apart from the three situations of the Sentences world, everything in this game comes from
+linglib: the truth values and connectives from `Linglib/Logic/Trivalent`, the formulas from
+`Linglib/Semantics/Presupposition`, the theories and their comparisons from
+`Eval/Presupposition`, and the unpublished extension from `Lab/Colinguistics`.
 "
 
 NewTheorem Lab.Colinguistics.verdict_chemla2009a

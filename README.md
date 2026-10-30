@@ -1,7 +1,8 @@
 # Three-Valued Semantics
 
 A [lean4game](https://github.com/leanprover-community/lean4game) that teaches Lean through trivalent
-semantics and presupposition projection. Every definition and theorem it uses comes from
+semantics and presupposition projection. Apart from a three-situation model for its examples,
+every definition and theorem it uses comes from
 [linglib](https://github.com/linglib-community/linglib).
 
 | World | Content | Tactics |
@@ -9,8 +10,9 @@ semantics and presupposition projection. Every definition and theorem it uses co
 | Truth tables | Strong Kleene values on `SignType` | `rfl`, `decide` |
 | Laws, not tables | lattice laws for Strong Kleene and classical conjunction | `exact`, `rw` |
 | Order matters | Middle Kleene (Peters 1979) and Weak Kleene conjunction | `intro`, `specialize`, `simp`, `constructor` |
+| From connectives to sentences | Peters's filtering and the symmetric Strong Kleene account on *France has a king and the king of France is bald*, in both orders | `cases` |
 | A map of theories | comparisons between linglib's eleven projection accounts | `apply` |
-| Theories meet data | Chemla and Schlenker (2012), and the unpublished extension of Limited Symmetry in `Lab` | `use` |
+| Theories meet data | predictions, observations and verdicts on Chemla and Schlenker (2012), and the unpublished extension of Limited Symmetry in `Lab` | `use` |
 
 ## Building
 

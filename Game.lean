@@ -1,6 +1,7 @@
 import Game.Levels.TruthTables
 import Game.Levels.Laws
 import Game.Levels.OrderMatters
+import Game.Levels.Sentences
 import Game.Levels.Map
 import Game.Levels.Data
 
@@ -9,11 +10,13 @@ Title "Three-Valued Semantics"
 Introduction "
 A sentence whose presupposition fails, such as *the king of France is bald*, is neither true nor
 false in a trivalent semantics. This game introduces the proof assistant Lean through that idea.
-The first three worlds work with three truth values and the conjunctions that combine them; the
-last two compare theories of presupposition projection with each other and with an experiment.
+The first three worlds work with three truth values and the conjunctions that combine them, the
+fourth applies them to sentences, and the last two compare theories of presupposition projection
+with each other and with an experiment.
 
-Every definition and theorem in the game comes from linglib, a Lean library of formal
-linguistics, so the objects you prove things about are the ones its analyses use.
+Apart from a three-situation model for the examples, every definition and theorem in the game
+comes from linglib, a Lean library of formal linguistics, so the objects you prove things about
+are the ones its analyses use.
 
 Click on a world to start.
 "
@@ -31,6 +34,6 @@ CaptionShort "Presupposition, truth values and proof"
 CaptionLong "Learn Lean through trivalent semantics, then compare theories of presupposition
 projection with each other and score them against experimental data."
 
-Dependency TruthTables → Laws → OrderMatters → Map → Data
+Dependency TruthTables → Laws → OrderMatters → Sentences → Map → Data
 
 MakeGame
