@@ -14,16 +14,17 @@ needs, and level statements that instantiate a linglib lemma.
 The game does not prove what linglib should state. When a level needs a result that linglib lacks,
 the result goes into linglib first, and the game then moves its pinned commit (see the README).
 
-Status: **pinned** means in linglib at the commit pinned in `lakefile.lean`; **to write** means
-planned; **PR** and **branch** mean in the game but not yet on `main`.
+Status: **pinned** means in linglib at the commit pinned in `lakefile.lean`; **linglib #N** means
+in an open or merged linglib PR after the pin; **PR** and **branch** mean in the game but not yet on
+`main`.
 
 ## Needed from linglib
 
 | Result | In linglib | Status | Used for |
 | --- | --- | --- | --- |
-| Weak Kleene projection: a formula evaluated by the Weak Kleene connectives is undefined wherever the presupposition of one of its triggers fails | `Semantics/Presupposition/Formula.lean`, on `Formula.eval` | to write | Coppock and Champollion's claim that the Weak Kleene connectives predict that presuppositions always project |
-| Every operation built from the Weak Kleene connectives is undefined when an argument is, so Strong Kleene conjunction is not definable from them | `Logic/Trivalent` | to write | their claim that Weak Kleene is definable from Strong Kleene "but not vice versa" |
-| Weak Kleene connectives defined from Strong Kleene ones | `meetWeak_eq`, `joinWeak_eq` in `Studies/BeaverKrahmer2001.lean` | pinned | the converse direction of the same claim |
+| Weak Kleene projection: a formula evaluated by the Weak Kleene connectives is defined exactly where the presupposition of each of its triggers holds | `Presupposition.Formula.weakKleene_ne_zero_iff` in `Semantics/Presupposition/SyntacticEnvironment.lean` | linglib #6045 | Coppock and Champollion's claim that the Weak Kleene connectives predict that presuppositions always project |
+| Under the Weak Kleene connectives a formula is undefined exactly when one of its atoms is, so they do not define Strong Kleene conjunction | `Trivalent.Formula.eval_weakKleene_eq_zero_iff`, `Trivalent.Formula.not_exists_eval_weakKleene_eq_inf` in `Logic/Trivalent/Propositional.lean` | linglib #6045 | their claim that Weak Kleene is definable from Strong Kleene "but not vice versa" |
+| The Strong Kleene connectives define the Weak Kleene ones | `Trivalent.Formula.exists_eval_strongKleene_eq_meetWeak` and `…_joinWeak` in `Logic/Trivalent/Propositional.lean`; the identities `meetWeak_eq`, `joinWeak_eq` in `Studies/BeaverKrahmer2001.lean` | linglib #6045; pinned | the other direction of the same claim |
 | The partial definite article, and presupposition failure as distinct from uninterpretability | `Semantics/Composition/Partial.lean`; `the_pizza`, `the_student_fails`, `the_john_uninterpretable` in `Studies/HeimKratzer1998.lean` | pinned | undefined values of types other than `t` |
 
 ## Stays in the game
