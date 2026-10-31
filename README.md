@@ -15,6 +15,7 @@ semantics and presupposition projection. Every definition and theorem it uses co
 ## Building
 
 The game requires linglib at a pinned commit (see `lakefile.lean`), and mathlib comes with it.
+`LINGLIB.md` records which declarations belong in linglib and which stay in the game.
 
 ```bash
 lake update -R
